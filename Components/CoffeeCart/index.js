@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-
+import cartStore from "../Stores/cartStore";
+import { observer } from "mobx-react";
 // NativeBase Components
 import { Text, List, Button } from "native-base";
 // Component
@@ -24,7 +25,7 @@ class CoffeeCart extends Component {
     };
   }
   render() {
-    let coffeeshops = this.state.list;
+    let coffeeshops = cartStore.List;
     let content;
     if (coffeeshops) {
       content = coffeeshops.map((item, index) => (
@@ -43,4 +44,4 @@ class CoffeeCart extends Component {
   }
 }
 
-export default CoffeeCart;
+export default observer(CoffeeCart);

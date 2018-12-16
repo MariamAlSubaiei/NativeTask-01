@@ -19,7 +19,13 @@ class HomePage extends Component {
       <Container style={styles.transparent}>
         <View style={styles.overlay} />
         <Header style={styles.transparent} />
-        <CoffeeCart />
+        <CoffeeList />
+        {/* <Switch>
+          <Route path="../CoffeeCart" component={CoffeeCart} />
+          <Route path="../CoffeeDetail" component={CoffeeDetail} />
+          <Route path="../Login" component={Login} />
+          <Redirect to="/" />
+        </Switch> */}
       </Container>
     );
   }
